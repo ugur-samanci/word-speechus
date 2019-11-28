@@ -1,0 +1,159 @@
+*{
+	
+}
+
+/*container*/
+
+.container{
+
+}
+
+
+/*container*/
+
+/*header*/
+
+.header{
+	font-size: 175%;
+	font-weight: bold;
+    font-family: 'Headland One', serif;
+    text-align: center;
+    background-color: #91bd3a;
+    color: #000;
+    padding: 1%;
+}
+
+.slogan{
+	width: 100%;
+	height: auto;
+	font-size: 75%;
+	font-weight: bold;
+    font-family: 'Headland One', serif;
+    text-align: center;
+    position: fixed;
+    margin: auto 0;
+    bottom: 0;
+    padding: 0.5%;
+    background-color: #91bd3a;
+    color: #000;
+
+}
+
+/*header*/
+
+/*content*/
+
+.input{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin: 3% auto;
+}
+
+.input #key{
+	width: 35%;
+	height: auto;	
+	font-family: 'Headland One', serif;
+	font-size: 100%;
+	padding: 1%;
+	float: left;
+	margin-left: 27%;
+}
+
+.input #addWord{
+	width: auto;
+	height: auto;
+	font-family: 'Headland One', serif;
+	font-size: 90%;
+	padding: 1% 1%;
+	text-align: center;
+	float: left;
+}
+
+#keyArr{
+	width: 100%;
+	height: auto;
+	float: left;
+	text-align: center;
+	margin-top: 0.5%;
+}
+
+#keyArr span{
+	width: 35%;
+	height: 10%;
+	font-family: 'Headland One', serif;
+	font-weight: bold;
+	font-size: 65%;
+	color: gray;
+	float: left;
+	margin-left: 28.5%;
+}
+
+.err{
+	width: 100%;
+	height: auto;
+	float: left;
+	text-align: center;
+	font-family: 'Headland One', serif;
+	font-weight: bold;
+	font-size: 75%;
+	color: #fa4252;
+	margin-top: 1%;
+}
+
+#start{
+	width: 100%;
+	height: auto;
+	float: left;
+	margin-top: 0.5%;
+	margin-bottom: 2%;
+	text-align: center;
+}
+
+#starting{
+	padding: 1% 2%;
+	font-family: 'Headland One', serif;
+	font-weight: bold;
+	font-size: 125%;
+}
+
+/*content*/
+
+/*test*/
+
+.test{
+	width: 100%;
+	height: auto;	
+	margin-bottom: 0.5%;
+	float: left;
+	text-align: center;
+	display: none;
+}
+
+.test:nth-last-child( 1 ){
+	margin-bottom: 5%;
+}
+
+.test .wordTest{
+	width: auto;
+	float: left;
+	font-family: 'Headland One', serif;
+	font-size: 100%;
+	margin-top: 0.8%;	
+	text-align: right;
+	text-transform: lowercase;
+	margin-left: 30%;
+}
+
+.test .wordTestInput{
+	width: 26%;
+	float: right;
+	height: auto;
+	border: 2px solid gray;
+	padding: 0.6%;
+	border-radius: 5px;
+	margin-left: 1%;
+	margin-right: 34%;
+}
+
+/*test*/
