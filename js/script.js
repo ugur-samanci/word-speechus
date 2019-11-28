@@ -23,14 +23,14 @@ var wordList = {
 	radio: 'radyo',
 };
 
-
+//add new word
 function addKey(){
 
 	if( ( document.getElementById("key").value.length > 0 ) && ( document.getElementById("key").value.trim() != "" ) ){
 
 		key = document.getElementById("key");
 		keyList = document.getElementsByClassName("keyArr")[0];
-		keyList.innerHTML = "Your test list: ";
+		keyList.innerHTML = "<h2>Your test list: </h2>";
 
 		keyArr.push( key.value );
 
@@ -38,8 +38,37 @@ function addKey(){
 
 		keyArr.forEach( function( word ){
 
-			keyList.innerHTML += word + ', ';
+			var wordArr = document.createElement( 'DIV' );
 
+			wordArr.classList.add( 'wordList' );
+			var wordArrText = document.createTextNode( word );
+
+			//delete item
+
+			wordArr.addEventListener( 'click', function( event ){
+
+				this.setAttribute( 'style', 'display: none;' );
+
+				var index = keyArr.indexOf( this.innerHTML );
+				delete keyArr[ index ]; 
+
+			});
+
+			wordArr.appendChild( wordArrText );
+			
+
+			
+
+	/*input.addEventListener( 'focusout', function( event ){
+				
+				inputWord = this.previousSibling.innerHTML;
+				enterWord = this.value;
+
+				compareWord( inputWord, enterWord, this);
+
+			});			*/
+
+			keyList.appendChild( wordArr );
 		});
 
 		document.getElementsByClassName("err")[0].innerHTML = "";
@@ -51,7 +80,8 @@ function addKey(){
 	}
 }
 
-function start(){
+//add new list and start challange
+function start( callback ){
 
 	if( keyArr.length > 0 ){
 
@@ -104,6 +134,8 @@ function start(){
 	
 }
 
+
+//compare word entered user
 function compareWord( compWord, enterWord, inputPath ){
 
 	for( let [ key, value ] of Object.entries( wordList ) ){
@@ -128,3 +160,11 @@ function compareWord( compWord, enterWord, inputPath ){
 	}
 
 }
+
+//click and remove word on the list (arr)
+
+/*document.querySelector( '#keyArr .keyArr div' ).onclick = function( element ){
+
+	console.log( " tiklandi" );
+
+}*/
